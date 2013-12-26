@@ -1,0 +1,13 @@
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\bin\Debug\Blood Manager.exe.config
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\bin\Debug\Blood Manager.exe
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\bin\Debug\Blood Manager.pdb
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood Manager.csprojResolveAssemblyReference.cache
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\MainWindow.baml
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\MainWindow.g.cs
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\App.g.cs
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood Manager_MarkupCompile.cache
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood Manager.g.resources
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood_Manager.Properties.Resources.resources
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood Manager.csproj.GenerateResource.Cache
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood Manager.exe
+c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood Manager.pdb
