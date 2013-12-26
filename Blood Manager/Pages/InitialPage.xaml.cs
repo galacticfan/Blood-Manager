@@ -25,9 +25,29 @@ namespace Blood_Manager
             InitializeComponent();
         }
 
+        // Exit and minimize button control
+        private void exitApplicationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void minimizeApplicationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = Window.GetWindow(this);
+            window.WindowState = WindowState.Minimized;
+        }
+
+        // Mode select control
         private void localModeBtn_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("Pages/LocalModeMain.xaml", UriKind.Relative));
         }
+
+        private void serverModeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Pages/ServerModeMain.xaml", UriKind.Relative));
+        }
+
+        
     }
 }

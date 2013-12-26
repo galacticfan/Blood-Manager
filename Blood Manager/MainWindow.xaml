@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Blood_Manager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Blood Manager" Height="628" Width="1000" WindowStyle="None" ResizeMode="NoResize">
+        Title="Blood Manager" Height="628" Width="1000" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <DockPanel>
         <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
     </DockPanel>
