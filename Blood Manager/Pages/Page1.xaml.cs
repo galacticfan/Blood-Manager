@@ -24,5 +24,10 @@ namespace Blood_Manager
         {
             InitializeComponent();
         }
+
+        private void localModeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Pages/Page2.xaml", UriKind.Relative));
+        }
     }
 }

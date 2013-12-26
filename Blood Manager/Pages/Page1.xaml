@@ -19,7 +19,6 @@
     </Page.Resources>
     
     <Grid>
-        
-        <Button x:Name="settingsBtn" Style="{StaticResource MainButtonStyle}" Content="local mode" HorizontalAlignment="Left" Margin="607,302,0,0" VerticalAlignment="Top" Width="310" FontSize="50" Height="137" />
+        <Button x:Name="localModeBtn" Style="{StaticResource MainButtonStyle}"  Content="local mode" HorizontalAlignment="Left" Margin="607,302,0,0" VerticalAlignment="Top" Width="310" FontSize="50" Height="137" Click="localModeBtn_Click" />
     </Grid>
 </Page>

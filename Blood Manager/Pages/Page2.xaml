@@ -6,8 +6,10 @@
       mc:Ignorable="d" 
       d:DesignHeight="628" d:DesignWidth="1000"
 	Title="Page2" Background="#FFC70E0E">
-
+    <Page.Resources>
+        <ResourceDictionary Source="StylesDictionary.xaml" />
+    </Page.Resources>
     <Grid>
-        
+        <Button x:Name="settingsBtn" Style="{StaticResource MainButtonStyle}" Content="local mode" HorizontalAlignment="Left" Margin="607,302,0,0" VerticalAlignment="Top" Width="310" FontSize="50" Height="137" />
     </Grid>
 </Page>

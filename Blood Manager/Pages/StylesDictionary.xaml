@@ -27,8 +27,7 @@
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border x:Name="border" BorderThickness="0 1 0 0" Background="{TemplateBinding Background}" Margin="0,51,0,0">
                             <Grid>
-                                <ContentPresenter HorizontalAlignment="Center" 
-                                                                        VerticalAlignment="Center" x:Name="content"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="content"/>
                             </Grid>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -68,5 +67,4 @@
             </Setter>
         </Style>
 
-    
 </ResourceDictionary>
