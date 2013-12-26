@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\App.xaml
-4-117156301
+4-124143525
 
-7-1012714431
+7662790436
 131478842535
-MainWindow.xaml;Pages\Page1.xaml;Pages\Page2.xaml;Pages\StylesDictionary.xaml;
+MainWindow.xaml;Pages\InitialPage.xaml;Pages\LocalModeMain.xaml;Pages\StylesDictionary.xaml;
 
 False
 

@@ -18,16 +18,16 @@ namespace Blood_Manager
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class InitialPage : Page
     {
-        public Page1()
+        public InitialPage()
         {
             InitializeComponent();
         }
 
         private void localModeBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages/Page2.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages/LocalModeMain.xaml", UriKind.Relative));
         }
     }
 }

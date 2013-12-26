@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Jake\Documents\Visual Studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\
+C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\
 Blood_Manager
 none
 false
 DEBUG;TRACE
-C:\Users\Jake\Documents\Visual Studio 2013\Projects\Blood Manager\Blood Manager\App.xaml
-4-117156301
+C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\App.xaml
+4-124143525
 
-111282739125
+11-1336723304
 131478842535
-MainWindow.xaml;Pages\Page1.xaml;Pages\Page2.xaml;Pages\StylesDictionary.xaml;
+MainWindow.xaml;Pages\InitialPage.xaml;Pages\LocalModeMain.xaml;Pages\StylesDictionary.xaml;
 
 False
 

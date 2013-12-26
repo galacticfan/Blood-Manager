@@ -23,7 +23,7 @@ namespace Blood_Manager
         public MainWindow()
         {
             InitializeComponent();
-            _NavigationFrame.Navigate(new Page1()); // load content from Page1.xaml
+            _NavigationFrame.Navigate(new InitialPage()); // load content from Page1.xaml
         }
     }
 }
