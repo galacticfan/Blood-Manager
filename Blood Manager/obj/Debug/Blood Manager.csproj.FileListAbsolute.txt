@@ -11,3 +11,8 @@ c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\
 c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood Manager.csproj.GenerateResource.Cache
 c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood Manager.exe
 c:\users\jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Blood Manager.pdb
+C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Pages\Page1.baml
+C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Pages\Page2.baml
+C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Pages\Page1.g.cs
+C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Pages\Page2.g.cs
+C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Pages\StylesDictionary.baml
