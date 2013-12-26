@@ -59,7 +59,8 @@
                             <Trigger Property="IsDefaulted" Value="True"/>
                             <Trigger Property="IsFocused" Value="True"/>
                             <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="Foreground" Value="Gray" />
+                                <Setter Property="Background" Value="#969696" />
+                                <Setter Property="Foreground" Value="#e1e1e1" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
