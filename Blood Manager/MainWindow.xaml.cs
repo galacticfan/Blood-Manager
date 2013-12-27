@@ -25,5 +25,13 @@ namespace Blood_Manager
             InitializeComponent();
             _NavigationFrame.Navigate(new InitialPage()); // load content from Page1.xaml
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
     }
 }

@@ -22,7 +22,7 @@
         <Button x:Name="minimizeApplicationBtn" Style="{StaticResource MainButtonStyle}" Content="_" HorizontalAlignment="Left" Margin="936,2,0,0" VerticalAlignment="Top" Width="28" FontSize="18" Height="28" FontWeight="Bold" Click="minimizeApplicationBtn_Click" />
         <Button x:Name="exitApplicationBtn" Style="{StaticResource MainButtonStyle}" Content="X" HorizontalAlignment="Left" Margin="969,2,0,0" VerticalAlignment="Top" Width="28" FontSize="18" Height="28" FontWeight="Bold" Click="exitApplicationBtn_Click" />
         <Button x:Name="localModeBtn" Style="{StaticResource MainButtonStyle}"  Content="local mode" HorizontalAlignment="Left" Margin="549,337,0,0" VerticalAlignment="Top" Width="222" FontSize="34" Height="66" Click="localModeBtn_Click" />
-        <Button x:Name="serverModeBtn" Style="{StaticResource MainButtonStyle}"  Content="server mode" HorizontalAlignment="Left" Margin="253,337,0,0" VerticalAlignment="Top" Width="222" FontSize="34" Height="66" Click="serverModeBtn_Click" />
+        <Button x:Name="serverModeBtn" Style="{StaticResource MainButtonStyle}"  Content="server mode" HorizontalAlignment="Left" Margin="253,337,0,0" VerticalAlignment="Top" Width="222" FontSize="34" Height="66" Click="serverModeBtn_Click" IsEnabled="False" />
         <Label Content="Which mode would you like this application to operate in?" HorizontalAlignment="Left" Margin="118,274,0,0" VerticalAlignment="Top" Height="60" Width="786" FontSize="30" Foreground="#FF474747"/>
         <Label Content="Welcome to Blood Manager." HorizontalAlignment="Left" Margin="316,227,0,0" VerticalAlignment="Top" Height="60" Width="402" FontSize="30" Foreground="#FF474747"/>
     </Grid>
