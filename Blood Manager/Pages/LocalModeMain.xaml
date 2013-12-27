@@ -65,13 +65,13 @@
         <!--Title pieces-->
         <Label Content="BLOOD" HorizontalAlignment="Left" Margin="357,8,0,0" VerticalAlignment="Top" Height="66" Width="174" FontWeight="Bold" FontSize="48"/>
         <Label Content="Manager v0.1" HorizontalAlignment="Left" Margin="529,8,0,0" VerticalAlignment="Top" Height="76" Width="332" FontSize="48"/>
-        <Image HorizontalAlignment="Left" Height="66" Margin="820,10,0,0" VerticalAlignment="Top" Width="96" Source="/Blood Manager;component/img/smallLogo.png"/>
+        <Image HorizontalAlignment="Left" Height="66" Margin="822,10,0,0" VerticalAlignment="Top" Width="96" Source="/Blood Manager;component/img/smallLogo.png"/>
 
         <!--Listbox-->
         <ListBox  Style="{StaticResource ListBoxStyle}" HorizontalAlignment="Left" Height="532" Margin="10,86,0,0" VerticalAlignment="Top" Width="346" Background="White">
+            <ListBoxItem Style="{StaticResource ListItemStyle}" Content="Placeholder Text"/>
             <ListBoxItem Style="{StaticResource ListItemStyle}" Content="PLACEHOLDER TEXT"/>
-            <ListBoxItem Style="{StaticResource ListItemStyle}" Content="PLACEHOLDER TEXT"/>
-            <ListBoxItem Style="{StaticResource ListItemStyle}" Content="PLACEHOLDER TEXT"/>
+            <ListBoxItem Style="{StaticResource ListItemStyle}" Content="Placeholder Text"/>
             <ListBoxItem Style="{StaticResource ListItemStyle}" Content="PLACEHOLDER TEXT"/>
         </ListBox>
         <Button x:Name="refreshListBtn" Style="{StaticResource MainButtonStyle}"  Content="refresh list" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="346" FontSize="20" Height="31" />
