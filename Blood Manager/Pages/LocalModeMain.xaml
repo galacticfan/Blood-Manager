@@ -21,7 +21,7 @@
 
         <!--Details Box-->
         <Rectangle Fill="#B6BBC3" HorizontalAlignment="Left" Height="537" Margin="366,81,0,0" VerticalAlignment="Top" Width="624"/>
-        <Button x:Name="newEntryBtn" Style="{StaticResource MainButtonStyle}"  Content="new entry" HorizontalAlignment="Left" Margin="371,86,0,0" VerticalAlignment="Top" Width="135" FontSize="24" Height="38" />
+        <Button x:Name="newEntryBtn" Style="{StaticResource MainButtonStyle}"  Content="new entry" HorizontalAlignment="Left" Margin="371,86,0,0" VerticalAlignment="Top" Width="135" FontSize="24" Height="38" Click="newEntryBtn_Click" />
         <Button x:Name="editEntryBtn" Style="{StaticResource MainButtonStyle}"  Content="edit entry" HorizontalAlignment="Left" Margin="511,86,0,0" VerticalAlignment="Top" Width="136" FontSize="24" Height="38" />
         <Button x:Name="deleteEntryBtn" Style="{StaticResource MainButtonStyle}"  Content="delete entry" HorizontalAlignment="Left" Margin="652,86,0,0" VerticalAlignment="Top" Width="151" FontSize="24" Height="38" />
         <Button x:Name="saveChangesBtn" Style="{StaticResource MainButtonStyle}"  Content="save changes" HorizontalAlignment="Left" Margin="808,86,0,0" VerticalAlignment="Top" Width="177" FontSize="24" Height="38" />
@@ -35,13 +35,13 @@
         <Label Content="RhD Factor:" HorizontalAlignment="Left" Margin="724,210,0,0" VerticalAlignment="Top" FontSize="30"/>
         <TextBox x:Name="rhdTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="892,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="93"/>
         <Label Content="Address:" HorizontalAlignment="Left" Margin="369,253,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox x:Name="addressTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="169" Margin="497,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="488"/>
-        <Label Content="Phone:" HorizontalAlignment="Left" Margin="369,430,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox x:Name="phoneTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="1" Margin="475,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
-        <Label Content="Mobile:" HorizontalAlignment="Left" Margin="671,430,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox x:Name="mobileTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="1" Margin="785,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="addressTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="111" Margin="497,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="488"/>
+        <Label Content="Phone:" HorizontalAlignment="Left" Margin="369,369,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <TextBox x:Name="phoneTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="1" Margin="475,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
+        <Label Content="Mobile:" HorizontalAlignment="Left" Margin="671,369,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <TextBox x:Name="mobileTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="1" Margin="785,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <!--Separator Detail Box-->
-        <Rectangle HorizontalAlignment="Left" Height="500" Margin="684,247,0,-119" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+        <Rectangle HorizontalAlignment="Left" Height="500" Margin="684,188,0,-60" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -59,8 +59,8 @@
             </Rectangle.Fill>
         </Rectangle>
         <!--Medical Notes-->
-        <Label Content="Medical Notes:" HorizontalAlignment="Left" Margin="369,501,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox x:Name="medicalNotesTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="65" Margin="375,547,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="610" VerticalScrollBarVisibility="Visible"/>
+        <Label Content="Medical Notes:" HorizontalAlignment="Left" Margin="369,436,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <TextBox x:Name="medicalNotesTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="129" Margin="375,483,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="610" VerticalScrollBarVisibility="Visible"/>
 
         <!--Title pieces-->
         <Label Content="BLOOD" HorizontalAlignment="Left" Margin="357,8,0,0" VerticalAlignment="Top" Height="66" Width="174" FontWeight="Bold" FontSize="48"/>

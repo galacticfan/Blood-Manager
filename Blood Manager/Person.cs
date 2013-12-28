@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blood_Manager
 {
-    class Person
+    public class Person
     {
         public string Surname
         {

@@ -42,6 +42,13 @@ namespace Blood_Manager.Pages
         string fileToLoad;
         List<Person> people = new List<Person>();
         XmlDocument xDoc = new XmlDocument();
+        NewEntryWindow newEntry = new NewEntryWindow();
+
+        public static Person personFromAddDialog
+        {
+            get;
+            set;
+        }
 
         // GENERAL METHODS
         void clearTextBoxes(DependencyObject obj)
@@ -53,6 +60,7 @@ namespace Blood_Manager.Pages
                 clearTextBoxes(VisualTreeHelper.GetChild(obj, i));
             }
         }
+
         // TRIGGERS
         private void loadFileBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -105,6 +113,19 @@ namespace Blood_Manager.Pages
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error Message", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void newEntryBtn_Click(object sender, RoutedEventArgs e)
+        {
+            newEntry.ShowDialog();
+
+            if (newEntry.DialogResult.HasValue && newEntry.DialogResult.Value)
+            {
+                people.Add(personFromAddDialog);
+                string fullName = personFromAddDialog.Forename + " " + personFromAddDialog.Surname;
+                listBoxNames.Items.Add(fullName);
+                MessageBox.Show("New entry successfully added.", "Successfully Added", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
    

@@ -18,3 +18,5 @@ C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\
 C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Pages\LocalModeMain.g.cs
 C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Pages\ServerModeMain.baml
 C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\Pages\ServerModeMain.g.cs
+C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\NewEntryWindow.baml
+C:\Users\Jake\documents\visual studio 2013\Projects\Blood Manager\Blood Manager\obj\Debug\NewEntryWindow.g.cs
