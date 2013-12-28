@@ -8,5 +8,40 @@ namespace Blood_Manager
 {
     class Person
     {
+        public string Surname
+        {
+            get;
+            set;
+        }
+        public string Forename
+        {
+            get;
+            set;
+        }
+        public string BloodGroup
+        {
+            get;
+            set;
+        }
+        public string RhD
+        {
+            get;
+            set;
+        }
+        public string Address
+        {
+            get;
+            set;
+        }
+        public string Phone
+        {
+            get;
+            set;
+        }
+        public string Mobile
+        {
+            get;
+            set;
+        }
     }
 }

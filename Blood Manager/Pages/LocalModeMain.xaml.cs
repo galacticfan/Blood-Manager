@@ -41,10 +41,24 @@ namespace Blood_Manager.Pages
         // GLOBALS
         string fileToLoad;
         List<Person> people = new List<Person>();
+        XmlDocument xDoc = new XmlDocument();
 
-        // MAIN EVENTS
+        // GENERAL METHODS
+        void clearTextBoxes(DependencyObject obj)
+        {
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
+            {
+                if (obj is TextBox)
+                    ((TextBox)obj).Text = null;
+                clearTextBoxes(VisualTreeHelper.GetChild(obj, i));
+            }
+        }
+        // TRIGGERS
         private void loadFileBtn_Click(object sender, RoutedEventArgs e)
         {
+            listBoxNames.Items.Clear(); // clear list before hand
+            clearTextBoxes(this);
+
             Microsoft.Win32.OpenFileDialog openFD = new Microsoft.Win32.OpenFileDialog();
             openFD.DefaultExt = ".xml";
             openFD.Filter = "XML Document (.xml)|*.xml";
@@ -53,14 +67,13 @@ namespace Blood_Manager.Pages
             if (result == true) // check a file was selected
             {
                 fileToLoad = openFD.FileName;
+                xDoc.Load(fileToLoad);
             }
 
-            XmlDocument xDoc = new XmlDocument();
-            xDoc.Load(fileToLoad);
             foreach (XmlNode xNode in xDoc.SelectNodes("People/Person"))
             {
                 Person p = new Person();
-                p.Surename = xNode.SelectSingleNode("Surname").InnerText;
+                p.Surname = xNode.SelectSingleNode("Surname").InnerText;
                 p.Forename = xNode.SelectSingleNode("Forename").InnerText;
                 p.BloodGroup = xNode.SelectSingleNode("BloodGroup").InnerText;
                 p.RhD = xNode.SelectSingleNode("RhD").InnerText;
@@ -69,9 +82,31 @@ namespace Blood_Manager.Pages
                 p.Mobile = xNode.SelectSingleNode("Mobile").InnerText;
                 people.Add(p);
 
-                string fullName = p.Forename + " " + p.Surename;
+                string fullName = p.Forename + " " + p.Surname;
                 listBoxNames.Items.Add(fullName);
             }
         }
+
+        private void listBoxNames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                if (listBoxNames.SelectedIndex != -1) // prevents selected index error
+                {
+                    surnameTxtBox.Text = people[listBoxNames.SelectedIndex].Surname;
+                    forenameTxtBox.Text = people[listBoxNames.SelectedIndex].Forename;
+                    bloodGroupTxtBox.Text = people[listBoxNames.SelectedIndex].BloodGroup;
+                    rhdTxtBox.Text = people[listBoxNames.SelectedIndex].RhD;
+                    addressTxtBox.Text = people[listBoxNames.SelectedIndex].Address;
+                    phoneTxtBox.Text = people[listBoxNames.SelectedIndex].Phone;
+                    mobileTxtBox.Text = people[listBoxNames.SelectedIndex].Mobile;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Message", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+   
     }
 }

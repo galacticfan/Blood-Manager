@@ -27,19 +27,19 @@
         <Button x:Name="saveChangesBtn" Style="{StaticResource MainButtonStyle}"  Content="save changes" HorizontalAlignment="Left" Margin="808,86,0,0" VerticalAlignment="Top" Width="177" FontSize="24" Height="38" />
         <!--Detail Box Contents-->
         <Label Content="Surname:" HorizontalAlignment="Left" Margin="369,124,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="503,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="482"/>
+        <TextBox x:Name="surnameTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="503,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="482"/>
         <Label Content="Forename:" HorizontalAlignment="Left" Margin="369,167,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="518,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="467"/>
+        <TextBox x:Name="forenameTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="518,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="467"/>
         <Label Content="Blood Group:" HorizontalAlignment="Left" Margin="369,210,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="554,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="bloodGroupTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="554,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
         <Label Content="RhD Factor:" HorizontalAlignment="Left" Margin="724,210,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="892,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="93"/>
+        <TextBox x:Name="rhdTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="892,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="93"/>
         <Label Content="Address:" HorizontalAlignment="Left" Margin="369,253,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="169" Margin="497,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="488"/>
+        <TextBox x:Name="addressTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="169" Margin="497,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="488"/>
         <Label Content="Phone:" HorizontalAlignment="Left" Margin="369,430,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="1" Margin="475,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
+        <TextBox x:Name="phoneTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="1" Margin="475,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
         <Label Content="Mobile:" HorizontalAlignment="Left" Margin="671,430,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="1" Margin="785,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="mobileTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="1" Margin="785,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <!--Separator Detail Box-->
         <Rectangle HorizontalAlignment="Left" Height="500" Margin="684,247,0,-119" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
@@ -60,7 +60,7 @@
         </Rectangle>
         <!--Medical Notes-->
         <Label Content="Medical Notes:" HorizontalAlignment="Left" Margin="369,501,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBox HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="65" Margin="375,547,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="610" VerticalScrollBarVisibility="Visible"/>
+        <TextBox x:Name="medicalNotesTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="65" Margin="375,547,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="610" VerticalScrollBarVisibility="Visible"/>
 
         <!--Title pieces-->
         <Label Content="BLOOD" HorizontalAlignment="Left" Margin="357,8,0,0" VerticalAlignment="Top" Height="66" Width="174" FontWeight="Bold" FontSize="48"/>
@@ -68,7 +68,7 @@
         <Image HorizontalAlignment="Left" Height="66" Margin="822,10,0,0" VerticalAlignment="Top" Width="96" Source="/Blood Manager;component/img/smallLogo.png"/>
 
         <!--Listbox-->
-        <ListBox x:Name="listBoxNames"  Style="{StaticResource ListBoxStyle}" HorizontalAlignment="Left" Height="532" Margin="10,86,0,0" VerticalAlignment="Top" Width="346" Background="White" />
+        <ListBox x:Name="listBoxNames"  Style="{StaticResource ListBoxStyle}" HorizontalAlignment="Left" Height="532" Margin="10,86,0,0" VerticalAlignment="Top" Width="346" Background="White" SelectionChanged="listBoxNames_SelectionChanged" />
         <Button x:Name="refreshListBtn" Style="{StaticResource MainButtonStyle}"  Content="refresh list" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="346" FontSize="20" Height="31" />
         <Button x:Name="loadFileBtn" Style="{StaticResource MainButtonStyle}"  Content="load file" HorizontalAlignment="Left" Margin="11,14,0,0" VerticalAlignment="Top" Width="148" FontSize="20" Height="31" Click="loadFileBtn_Click" />
         <Button x:Name="searchBtn" Style="{StaticResource MainButtonStyle}"  Content="search for match" HorizontalAlignment="Left" Margin="164,14,0,0" VerticalAlignment="Top" Width="192" FontSize="20" Height="31" IsEnabled="False" />
