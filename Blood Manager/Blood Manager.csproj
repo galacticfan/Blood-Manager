@@ -90,6 +90,7 @@
     <Compile Include="Pages\LocalModeMain.xaml.cs">
       <DependentUpon>LocalModeMain.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Person.cs" />
     <Compile Include="Pages\ServerModeMain.xaml.cs">
       <DependentUpon>ServerModeMain.xaml</DependentUpon>
     </Compile>

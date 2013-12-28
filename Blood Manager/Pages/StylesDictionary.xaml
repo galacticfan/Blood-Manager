@@ -116,7 +116,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="ListItemStyle" TargetType="{x:Type ListBoxItem}">
+    <Style TargetType="{x:Type ListBoxItem}">
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="MinHeight" Value="26" />
         <Setter Property="Foreground" Value="Black" />
@@ -135,6 +135,14 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="border" Property="Background" Value="#e1f5ff" />
                         </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsFocused" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="border" Property="Background" Value="#4395cb"></Setter>
+                            <Setter Property="Foreground" Value="White" />
+                        </MultiTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
