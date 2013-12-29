@@ -43,5 +43,10 @@ namespace Blood_Manager
             get;
             set;
         }
+        public string MedicalNotes
+        {
+            get;
+            set;
+        }
     }
 }

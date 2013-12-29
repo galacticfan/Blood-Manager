@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
+using System.IO;
 
 namespace Blood_Manager.Pages
 {
@@ -24,6 +25,7 @@ namespace Blood_Manager.Pages
         public LocalModeMain()
         {
             InitializeComponent();
+            appDirectory = AppDomain.CurrentDomain.BaseDirectory;
         }
 
         // Exit and minimize button control
@@ -39,11 +41,11 @@ namespace Blood_Manager.Pages
         }
         
         // GLOBALS
-        string fileToLoad;
+        string fileToLoad, appDirectory;
+        bool hasLoadedFile = false;
         List<Person> people = new List<Person>();
         XmlDocument xDoc = new XmlDocument();
         
-
         public static Person personFromAddDialog
         {
             get;
@@ -90,6 +92,7 @@ namespace Blood_Manager.Pages
             {
                 fileToLoad = openFD.FileName;
                 xDoc.Load(fileToLoad);
+                hasLoadedFile = true;
             }
 
             foreach (XmlNode xNode in xDoc.SelectNodes("People/Person"))
@@ -102,6 +105,7 @@ namespace Blood_Manager.Pages
                 p.Address = xNode.SelectSingleNode("Address").InnerText;
                 p.Phone = xNode.SelectSingleNode("Phone").InnerText;
                 p.Mobile = xNode.SelectSingleNode("Mobile").InnerText;
+                p.MedicalNotes = xNode.SelectSingleNode("MedicalNotes").InnerText;
                 people.Add(p);
 
                 string fullName = p.Forename + " " + p.Surname;
@@ -122,6 +126,7 @@ namespace Blood_Manager.Pages
                     addressTxtBox.Text = people[listBoxNames.SelectedIndex].Address;
                     phoneTxtBox.Text = people[listBoxNames.SelectedIndex].Phone;
                     mobileTxtBox.Text = people[listBoxNames.SelectedIndex].Mobile;
+                    medicalNotesTxtBox.Text = people[listBoxNames.SelectedIndex].MedicalNotes;
                 }
             }
             catch (Exception ex)
@@ -146,7 +151,18 @@ namespace Blood_Manager.Pages
 
         private void editEntryBtn_Click(object sender, RoutedEventArgs e)
         {
-            changeReadOnly(false);
+            if (listBoxNames.Items.Count == 0)
+            {
+                MessageBox.Show("You haven't loaded a file and/or there are no entries to perfrom changes to.", "Invalid Request", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else if (listBoxNames.SelectedIndex == -1)
+            {
+                MessageBox.Show("You haven't selected any items.", "No Item Selected", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                changeReadOnly(false);
+            }
         }
 
         private void deleteEntryBtn_Click(object sender, RoutedEventArgs e)
@@ -171,7 +187,45 @@ namespace Blood_Manager.Pages
 
         private void saveChangesBtn_Click(object sender, RoutedEventArgs e)
         {
-            changeReadOnly(true);
+            if (listBoxNames.Items.Count == 0)
+            {
+                MessageBox.Show("You haven't loaded a file and/or there are no entries to perfrom changes to.", "Invalid Request", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                changeReadOnly(true);
+
+                people[listBoxNames.SelectedIndex].Surname = surnameTxtBox.Text;
+                people[listBoxNames.SelectedIndex].Forename = forenameTxtBox.Text;
+                people[listBoxNames.SelectedIndex].BloodGroup = bloodGroupTxtBox.Text;
+                people[listBoxNames.SelectedIndex].RhD = rhdTxtBox.Text;
+                people[listBoxNames.SelectedIndex].Address = addressTxtBox.Text;
+                people[listBoxNames.SelectedIndex].Phone = phoneTxtBox.Text;
+                people[listBoxNames.SelectedIndex].Mobile = mobileTxtBox.Text;
+                people[listBoxNames.SelectedIndex].MedicalNotes = medicalNotesTxtBox.Text;
+
+                listBoxNames.Items[listBoxNames.SelectedIndex] = forenameTxtBox.Text + " " + surnameTxtBox.Text;
+            }
+        }
+
+        private void saveFileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (hasLoadedFile == true)
+            {
+                XmlDocument xDocToWrite = new XmlDocument();
+                xDocToWrite.Load(fileToLoad);
+            }
+            else if (hasLoadedFile == false)
+            {
+                if (File.Exists(appDirectory + "Databases\\") == false)
+                {
+                    Directory.CreateDirectory(appDirectory + "Databases\\");
+
+                    XmlDocument xDocToWrite = new XmlDocument();
+                    // create xml doc here
+                }
+            }
+
         }
 
     }

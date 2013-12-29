@@ -50,6 +50,7 @@ namespace Blood_Manager
             personToAdd.Address = addressTxtBox.Text;
             personToAdd.Phone = phoneTxtBox.Text;
             personToAdd.Mobile = mobileTxtBox.Text;
+            personToAdd.MedicalNotes = medicalNotesTxtBox.Text;
 
             Pages.LocalModeMain.personFromAddDialog = personToAdd;
         }
