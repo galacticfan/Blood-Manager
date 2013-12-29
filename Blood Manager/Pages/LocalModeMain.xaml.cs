@@ -42,7 +42,7 @@ namespace Blood_Manager.Pages
         string fileToLoad;
         List<Person> people = new List<Person>();
         XmlDocument xDoc = new XmlDocument();
-        NewEntryWindow newEntry = new NewEntryWindow();
+        
 
         public static Person personFromAddDialog
         {
@@ -51,13 +51,27 @@ namespace Blood_Manager.Pages
         }
 
         // GENERAL METHODS
-        void clearTextBoxes(DependencyObject obj)
+        private void clearTextBoxes(DependencyObject obj)
         {
             for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
             {
                 if (obj is TextBox)
                     ((TextBox)obj).Text = null;
                 clearTextBoxes(VisualTreeHelper.GetChild(obj, i));
+            }
+        }
+
+        private void changeReadOnly(bool readOnly)
+        {
+            LoopControls ccChildren = new LoopControls();
+
+            foreach (object obj in ccChildren.GetChildren(this, 5))
+            {
+                if (obj.GetType() == typeof(TextBox))
+                {
+                    TextBox txtBox = (TextBox)obj;
+                    txtBox.IsReadOnly = readOnly;
+                }
             }
         }
 
@@ -118,6 +132,7 @@ namespace Blood_Manager.Pages
 
         private void newEntryBtn_Click(object sender, RoutedEventArgs e)
         {
+            NewEntryWindow newEntry = new NewEntryWindow();
             newEntry.ShowDialog();
 
             if (newEntry.DialogResult.HasValue && newEntry.DialogResult.Value)
@@ -128,6 +143,11 @@ namespace Blood_Manager.Pages
                 MessageBox.Show("New entry successfully added.", "Successfully Added", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
-   
+
+        private void editEntryBtn_Click(object sender, RoutedEventArgs e)
+        {
+            changeReadOnly(false);
+        }
+
     }
 }

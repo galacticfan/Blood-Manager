@@ -52,8 +52,6 @@ namespace Blood_Manager
             personToAdd.Mobile = mobileTxtBox.Text;
 
             Pages.LocalModeMain.personFromAddDialog = personToAdd;
-
-            //Pages.LocalModeMain.addPersonObj(personToAdd);
         }
     }
 }
