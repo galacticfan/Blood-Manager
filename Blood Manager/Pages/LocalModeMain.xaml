@@ -23,8 +23,8 @@
         <Rectangle Fill="#B6BBC3" HorizontalAlignment="Left" Height="537" Margin="366,81,0,0" VerticalAlignment="Top" Width="624"/>
         <Button x:Name="newEntryBtn" Style="{StaticResource MainButtonStyle}"  Content="new entry" HorizontalAlignment="Left" Margin="371,86,0,0" VerticalAlignment="Top" Width="135" FontSize="24" Height="38" Click="newEntryBtn_Click" />
         <Button x:Name="editEntryBtn" Style="{StaticResource MainButtonStyle}"  Content="edit entry" HorizontalAlignment="Left" Margin="511,86,0,0" VerticalAlignment="Top" Width="136" FontSize="24" Height="38" Click="editEntryBtn_Click" />
-        <Button x:Name="deleteEntryBtn" Style="{StaticResource MainButtonStyle}"  Content="delete entry" HorizontalAlignment="Left" Margin="652,86,0,0" VerticalAlignment="Top" Width="151" FontSize="24" Height="38" />
-        <Button x:Name="saveChangesBtn" Style="{StaticResource MainButtonStyle}"  Content="save changes" HorizontalAlignment="Left" Margin="808,86,0,0" VerticalAlignment="Top" Width="177" FontSize="24" Height="38" />
+        <Button x:Name="deleteEntryBtn" Style="{StaticResource MainButtonStyle}"  Content="delete entry" HorizontalAlignment="Left" Margin="652,86,0,0" VerticalAlignment="Top" Width="151" FontSize="24" Height="38" Click="deleteEntryBtn_Click" />
+        <Button x:Name="saveChangesBtn" Style="{StaticResource MainButtonStyle}"  Content="save changes" HorizontalAlignment="Left" Margin="808,86,0,0" VerticalAlignment="Top" Width="177" FontSize="24" Height="38" Click="saveChangesBtn_Click" />
         <!--Detail Box Contents-->
         <Label Content="Surname:" HorizontalAlignment="Left" Margin="369,124,0,0" VerticalAlignment="Top" FontSize="30"/>
         <TextBox x:Name="surnameTxtBox" HorizontalAlignment="Left" Style="{StaticResource TextboxMainStyle}" Height="20" Margin="503,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="482"/>

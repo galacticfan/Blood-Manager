@@ -149,5 +149,30 @@ namespace Blood_Manager.Pages
             changeReadOnly(false);
         }
 
+        private void deleteEntryBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (listBoxNames.SelectedIndex != -1)
+                {
+                    people.RemoveAt(listBoxNames.SelectedIndex);
+                    listBoxNames.Items.Remove(listBoxNames.SelectedItems[0]);
+                }
+                else if (listBoxNames.SelectedIndex == -1)
+                {
+                    MessageBox.Show("You have no entry selected.", "No Entry Selected", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Message", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void saveChangesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            changeReadOnly(true);
+        }
+
     }
 }
