@@ -212,17 +212,92 @@ namespace Blood_Manager.Pages
         {
             if (hasLoadedFile == true)
             {
-                XmlDocument xDocToWrite = new XmlDocument();
-                xDocToWrite.Load(fileToLoad);
+                XmlNode xNode = xDoc.SelectSingleNode("People");
+                xNode.RemoveAll(); // remove existing content
+
+                foreach (Person p in people)
+                {
+                    XmlNode xTop = xDoc.CreateElement("Person");
+                    XmlNode xSurname = xDoc.CreateElement("Surname");
+                    XmlNode xForename = xDoc.CreateElement("Forename");
+                    XmlNode xBloodGroup = xDoc.CreateElement("BloodGroup");
+                    XmlNode xRhD = xDoc.CreateElement("RhD");
+                    XmlNode xAddress = xDoc.CreateElement("Address");
+                    XmlNode xPhone = xDoc.CreateElement("Phone");
+                    XmlNode xMobile = xDoc.CreateElement("Mobile");
+                    XmlNode xMedicalNotes = xDoc.CreateElement("MedicalNotes");
+
+                    xSurname.InnerText = p.Surname;
+                    xForename.InnerText = p.Forename;
+                    xBloodGroup.InnerText = p.BloodGroup;
+                    xRhD.InnerText = p.RhD;
+                    xAddress.InnerText = p.Address;
+                    xPhone.InnerText = p.Phone;
+                    xMobile.InnerText = p.Mobile;
+                    xMedicalNotes.InnerText = p.MedicalNotes;
+
+                    xTop.AppendChild(xSurname);
+                    xTop.AppendChild(xForename);
+                    xTop.AppendChild(xBloodGroup);
+                    xTop.AppendChild(xRhD);
+                    xTop.AppendChild(xAddress);
+                    xTop.AppendChild(xPhone);
+                    xTop.AppendChild(xMobile);
+                    xTop.AppendChild(xMedicalNotes);
+                    xDoc.DocumentElement.AppendChild(xTop);
+                }
+
+                xDoc.Save(fileToLoad);
             }
             else if (hasLoadedFile == false)
             {
                 if (File.Exists(appDirectory + "Databases\\") == false)
                 {
                     Directory.CreateDirectory(appDirectory + "Databases\\");
+                    string filePath = appDirectory + "Databases\\bloodBank.xml";
+
+                    // create and write xml doc
+                    XmlTextWriter xWrite = new XmlTextWriter(filePath, Encoding.UTF8);
+                    xWrite.WriteStartElement("People");
+                    xWrite.WriteEndElement();
+                    xWrite.Close();
 
                     XmlDocument xDocToWrite = new XmlDocument();
-                    // create xml doc here
+                    xDocToWrite.Load(filePath);
+
+                    foreach (Person p in people)
+                    {
+                        XmlNode xTop = xDocToWrite.CreateElement("Person");
+                        XmlNode xSurname = xDocToWrite.CreateElement("Surname");
+                        XmlNode xForename = xDocToWrite.CreateElement("Forename");
+                        XmlNode xBloodGroup = xDocToWrite.CreateElement("BloodGroup");
+                        XmlNode xRhD = xDocToWrite.CreateElement("RhD");
+                        XmlNode xAddress = xDocToWrite.CreateElement("Address");
+                        XmlNode xPhone = xDocToWrite.CreateElement("Phone");
+                        XmlNode xMobile = xDocToWrite.CreateElement("Mobile");
+                        XmlNode xMedicalNotes = xDocToWrite.CreateElement("MedicalNotes");
+
+                        xSurname.InnerText = p.Surname;
+                        xForename.InnerText = p.Forename;
+                        xBloodGroup.InnerText = p.BloodGroup;
+                        xRhD.InnerText = p.RhD;
+                        xAddress.InnerText = p.Address;
+                        xPhone.InnerText = p.Phone;
+                        xMobile.InnerText = p.Mobile;
+                        xMedicalNotes.InnerText = p.MedicalNotes;
+
+                        xTop.AppendChild(xSurname);
+                        xTop.AppendChild(xForename);
+                        xTop.AppendChild(xBloodGroup);
+                        xTop.AppendChild(xRhD);
+                        xTop.AppendChild(xAddress);
+                        xTop.AppendChild(xPhone);
+                        xTop.AppendChild(xMobile);
+                        xTop.AppendChild(xMedicalNotes);
+                        xDocToWrite.DocumentElement.AppendChild(xTop);
+                    }
+
+                    xDocToWrite.Save(filePath);
                 }
             }
 
